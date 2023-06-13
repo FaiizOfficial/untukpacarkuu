@@ -1,1 +1,1 @@
-# websiteku
+https://faiizofficial.github.io/websiteku/
