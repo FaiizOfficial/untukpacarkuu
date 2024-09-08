@@ -1,75 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
-    <table bgcolor="blue">
-    <meta charset="UFT-8">
-    <meta name="viewport" content="widht=device-widht, initial-scale=1.0">
-    <title>Home</title>
-</table>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <nav align="center">
-        <a href="index.html">Home</a> |
-        <a href="mailto:octaviaparamitha81@gmail.com">Contact</a> |
-        <a href="about.html">About me</a> |
-    </nav>
-
-    <hr />
-
-    <header style="text-align: center;">
-        <img src="PROFILE.png" width="200" height="200" style="border-radius: 50%;">
-        <h1>Octavia Paramitha</h1>
-        <p>(Akuntan)</p>
+    <header>
+        <div class="container">
+            <h1>Nama Anda</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#about">Tentang Saya</a></li>
+                    <li><a href="#portfolio">Portofolio</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <hr />
-    <br>
-    <br>
-    <article style="text-align: center;">
-        <h2>Overview</h2>
-        <p>
-            Hi, Saya adalah seorang akuntan
-        </p>
-    </article>
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Selamat Datang di Portofolio Saya</h2>
+            <p>Desain kreatif dan solusi digital untuk kebutuhan Anda.</p>
+        </div>
+    </section>
 
-        <table align="center" border="1" width="80%" bgcolor="ghostwhite">
-            <thead>
-                <tr  bgcolor="Aqua">
-                    <th>Data Diri</th>
-                    <th>Keterangan</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>Nama</li>
-                            <li>Umur</li>
-                            <li>Status</li>
-                            <li>Instagram</li>
-                            <li>Hobi</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Octavia Paramitha</li>
-                            <li>18 Tahun</li>
-                            <li>Lajang</li>
-                            <li><a href="https://www.instagram.com/tataa18_._/">tataa18_._</a></li>
-                            <li>Membaca dan menulis</li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <br>
-        <br>
-    <hr>
-    <footer style="text-align: center;">
-        <p>Copyright & copy; 2023 <a href="https://www.instagram.com/tataa18_._/">tataa18_._</a></p>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Tentang Saya</h2>
+            <p>Lulusan SMK Kusuma Bangsa jurusan Multimedia tahun 2020 - 2023. Menjadi siswa teraktivasi di SMK. Memiliki keahlian khusus dalam menjalankan software Microsoft (Excel, Word, Power Point, dll). Desain (Adobe Photoshop, Adobe Premire Pro, Canva, dan Figma). Disiplin, tanggung jawab, teliti, jujur, dan mudah beradaptasi dalam berbagai lingkungan.</p>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Portofolio</h2>
+            <div class="portfolio-items">
+                <!-- Ganti gambar dan deskripsi dengan proyek-proyek Anda -->
+                <div class="portfolio-item">
+                    <img src="image1.jpg" alt="Proyek 1">
+                    <h3>Proyek 1</h3>
+                    <p>Deskripsi singkat tentang proyek ini.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="image2.jpg" alt="Proyek 2">
+                    <h3>Proyek 2</h3>
+                    <p>Deskripsi singkat tentang proyek ini.</p>
+                </div>
+                <!-- Tambahkan lebih banyak item portofolio di sini -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Kontak</h2>
+            <form>
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Faiizhsn. Semua hak cipta dilindungi.</p>
+        </div>
     </footer>
 </body>
-</html> 
+</html>
