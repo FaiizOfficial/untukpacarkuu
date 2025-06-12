@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Valentine Letter</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       background-color: #1c1b26;
       display: flex;
@@ -11,6 +18,7 @@
       align-items: center;
       height: 100vh;
       font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
     }
 
     .envelope {
@@ -20,23 +28,20 @@
       perspective: 1000px;
     }
 
-    .envelope-lid, .envelope-lid-secondary {
+    .envelope-lid {
       position: absolute;
       width: 100%;
       height: 100%;
       background: #fff;
       border: 1px solid #ccc;
       transform-origin: bottom;
-      transition: transform 1s;
+      animation: openLid 2s ease forwards;
       z-index: 3;
     }
 
-    .envelope-lid {
-      transform: rotateX(0deg);
-    }
-
-    .envelope:hover .envelope-lid {
-      transform: rotateX(-180deg);
+    @keyframes openLid {
+      0% { transform: rotateX(0deg); }
+      100% { transform: rotateX(-180deg); }
     }
 
     .card-wrapper {
@@ -49,48 +54,34 @@
       border-radius: 8px;
       overflow: hidden;
       z-index: 2;
-    }
-
-    .card {
-      width: 100%;
-      height: 100%;
       display: flex;
       flex-direction: column;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
 
     .card-cover {
-      flex: 1;
-      background: #f3f3f3;
+      background: #e91e63;
+      color: white;
       padding: 10px;
       text-align: center;
     }
 
-    .card-side-primary {
-      background: #e91e63;
-      color: white;
-    }
-
     .card-title {
-      font-size: 24px;
-      margin: 0;
-    }
-
-    .card-title-secondary {
-      font-weight: normal;
-    }
-
-    .card-title-main {
+      font-size: 18px;
       font-weight: bold;
-    }
-
-    .card-title-apostrophe {
-      color: red;
+      line-height: 1.4;
     }
 
     .card-body {
       padding: 15px;
       font-size: 14px;
       color: #333;
+      overflow-y: auto;
+      word-wrap: break-word;
+    }
+
+    .card-body p {
+      margin-bottom: 10px;
     }
 
     .heart-seal {
@@ -102,6 +93,8 @@
       height: 30px;
       background-color: #e91e63;
       clip-path: polygon(50% 0%, 100% 35%, 82% 100%, 50% 80%, 18% 100%, 0% 35%);
+      box-shadow: 0 0 5px rgba(255, 0, 128, 0.5);
+      z-index: 4;
     }
   </style>
 </head>
@@ -109,19 +102,21 @@
   <div class="envelope">
     <div class="envelope-lid"></div>
     <div class="card-wrapper">
-      <div class="card">
-        <div class="card-cover card-side card-side-primary">
-          <h1 class="card-title">
-            <span class="card-title-secondary">BANGUNNN SAYANGG SUDAH JAM 10</span>
-            <span class="card-title-main">SAYANGG JANGAN LUPA MAKAN YAHHH<span class="card-title-apostrophe">’</span>s</span>
-            <span class="card-title-secondary">I LOVE YOU SAYANGGGG</span>
-          </h1>
+      <div class="card-cover">
+        <div class="card-title">
+          BANGUNNN SAYANGGGG<br />
+          SAYANGG JANGAN LUPA MAKAN YAHHH❤️<br />
+          I LOVE YOU SAYANGGGG❤️
         </div>
-        <div class="card-body">
-          <p>Buat bidadarinya akuu,</p>
-          <p>Sayangg, aku mau bilang banyak banyak terimakasih yahh karena kita sudah berjuang sejauh ini, terimakasih udah selalu menjadi satu satu nya alasan aku buat semangat ngejalanin hidup yang terkadang semestapun ngga berpihak kepadaku, tapi aku selalu punya kamuu. akuu sayangg kamuuu</p>
-          <p>SEMANGATT SAYANG UNTUK HARI INIIII</p>
-        </div>
+      </div>
+      <div class="card-body">
+        <p>Buat bidadarinya akuu,</p>
+        <p>
+          Sayangg, aku mau bilang banyak banyak terimakasih yahh karena kita sudah berjuang sejauh ini.
+          Terimakasih udah selalu menjadi satu-satunya alasan aku buat semangat ngejalanin hidup yang
+          terkadang semestapun ngga berpihak kepadaku, tapi aku selalu punya kamuu. Aku sayangg kamuuu.
+        </p>
+        <p>SEMANGATT SAYANG UNTUK HARI INIIII ❤️</p>
       </div>
     </div>
     <div class="heart-seal"></div>
